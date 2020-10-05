@@ -1,7 +1,3 @@
-/*
- * Copyright 2019 IceRock MAG Inc. Use of this source code is governed by the Apache 2.0 license.
- */
-
 object Versions {
     object Android {
         const val compileSdk = 28
@@ -30,10 +26,11 @@ object Versions {
         object Android {
             const val kotlinStdLib = Versions.kotlin
             const val appCompat = "1.1.0"
-            const val material = "1.0.0"
+            const val material = "1.1.0"
             const val constraintLayout = "1.1.3"
             const val lifecycle = "2.0.0"
             const val recyclerView = "1.0.0"
+            const val multidex = "2.0.1"
         }
 
         object MultiPlatform {

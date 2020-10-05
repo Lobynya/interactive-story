@@ -1,7 +1,3 @@
-/*
- * Copyright 2019 IceRock MAG Inc. Use of this source code is governed by the Apache 2.0 license.
- */
-
 object Deps {
     object Plugins {
         const val kotlinSerialization =
@@ -37,6 +33,9 @@ object Deps {
             )
             val lifecycle = AndroidLibrary(
                 name = "androidx.lifecycle:lifecycle-extensions:${Versions.Libs.Android.lifecycle}"
+            )
+            val multidex = AndroidLibrary(
+                name = "com.android.support:multidex:1.0.3"
             )
         }
 
@@ -114,6 +113,26 @@ object Deps {
                 common = "dev.icerock.moko:widgets:${Versions.Libs.MultiPlatform.mokoWidgets}",
                 iosX64 = "dev.icerock.moko:widgets-iosx64:${Versions.Libs.MultiPlatform.mokoWidgets}",
                 iosArm64 = "dev.icerock.moko:widgets-iosarm64:${Versions.Libs.MultiPlatform.mokoWidgets}"
+            )
+            val mokoWidgetsSms = MultiPlatformLibrary(
+                common = "dev.icerock.moko:widgets-sms:${Versions.Libs.MultiPlatform.mokoWidgets}",
+                iosX64 = "dev.icerock.moko:widgets-sms-iosx64:${Versions.Libs.MultiPlatform.mokoWidgets}",
+                iosArm64 = "dev.icerock.moko:widgets-sms-iosarm64:${Versions.Libs.MultiPlatform.mokoWidgets}"
+            )
+            val mokoWidgetsBottomSheet = MultiPlatformLibrary(
+                common = "dev.icerock.moko:widgets-bottomsheet:${Versions.Libs.MultiPlatform.mokoWidgets}",
+                iosX64 = "dev.icerock.moko:widgets-bottomsheet-iosx64:${Versions.Libs.MultiPlatform.mokoWidgets}",
+                iosArm64 = "dev.icerock.moko:widgets-bottomsheet-iosarm64:${Versions.Libs.MultiPlatform.mokoWidgets}"
+            )
+            val mokoWidgetsDateTimePicker = MultiPlatformLibrary(
+                common = "dev.icerock.moko:widgets-datetime-picker:${Versions.Libs.MultiPlatform.mokoWidgets}",
+                iosX64 = "dev.icerock.moko:widgets-datetime-picker-iosx64:${Versions.Libs.MultiPlatform.mokoWidgets}",
+                iosArm64 = "dev.icerock.moko:widgets-datetime-picker-iosarm64:${Versions.Libs.MultiPlatform.mokoWidgets}"
+            )
+            val mokoWidgetsCollection = MultiPlatformLibrary(
+                common = "dev.icerock.moko:widgets-collection:${Versions.Libs.MultiPlatform.mokoWidgets}",
+                iosX64 = "dev.icerock.moko:widgets-collection-iosx64:${Versions.Libs.MultiPlatform.mokoWidgets}",
+                iosArm64 = "dev.icerock.moko:widgets-collection-iosarm64:${Versions.Libs.MultiPlatform.mokoWidgets}"
             )
             val mokoFields = MultiPlatformLibrary(
                 common = "dev.icerock.moko:fields:${Versions.Libs.MultiPlatform.mokoFields}",

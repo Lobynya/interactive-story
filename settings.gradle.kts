@@ -26,3 +26,10 @@ enableFeaturePreview("GRADLE_METADATA")
 
 include(":android-app")
 include(":mpp-library")
+listOf(
+    Modules.domain,
+    Modules.Features.description,
+    Modules.Features.contents,
+    Modules.Features.chat
+).forEach { include(it.name) }
+

@@ -14,6 +14,7 @@ android {
     defaultConfig {
         minSdkVersion(Versions.Android.minSdk)
         targetSdkVersion(Versions.Android.targetSdk)
+        multiDexEnabled = true
 
         applicationId = "org.example.app" // REPLACE:org.example.app:APP_ID
 
@@ -48,6 +49,7 @@ dependencies {
     implementation(Deps.Libs.Android.appCompat.name)
     implementation(Deps.Libs.Android.material.name)
     implementation(Deps.Libs.Android.recyclerView.name)
+    implementation(Deps.Libs.Android.multidex.name)
 
     implementation(Deps.Libs.MultiPlatform.napier.android!!)
 
