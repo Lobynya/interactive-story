@@ -18,6 +18,7 @@ import dev.icerock.moko.widgets.utils.setEventHandler
 import dev.icerock.moko.widgets.utils.toEdgeInsets
 import kotlinx.cinterop.readValue
 import kotlinx.cinterop.useContents
+import platform.CoreGraphics.CGAffineTransformMakeRotation
 import platform.CoreGraphics.CGRectZero
 import platform.UIKit.UIControlEventValueChanged
 import platform.UIKit.UIEdgeInsetsMake
@@ -33,7 +34,7 @@ import platform.Foundation.NSIndexPath
 import platform.UIKit.UITableViewScrollPosition
 import platform.UIKit.indexPathForRow
 
-actual class ReversedListWidgetFactory actual constructor(background: dev.icerock.moko.widgets.style.background.Background<dev.icerock.moko.widgets.style.background.Fill.Solid>?) :
+actual class ReversedListWidgetFactory actual constructor(private val background: dev.icerock.moko.widgets.style.background.Background<dev.icerock.moko.widgets.style.background.Fill.Solid>?) :
     ViewFactory<ListWidget<out WidgetSize>>{
     override fun <WS : WidgetSize> build(
         widget: ListWidget<out WidgetSize>,
